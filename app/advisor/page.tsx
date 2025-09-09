@@ -52,6 +52,13 @@ export default function AdvisorDashboard() {
       {client && data && (
         <ExtractedDataCard client={client} data={data} />
       )}
+        <button
+            className="bg-success-green text-white px-4 py-2 rounded shadow-soft"
+            onClick={handleGenerateInsight}
+            disabled={llmLoading}
+        >
+            {llmLoading ? 'Generating...' : 'Generate Insight & Add Compliance Note'}
+        </button>
 
       {/* Portfolio Visualizations */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
@@ -99,13 +106,7 @@ export default function AdvisorDashboard() {
             <li>Plan for vest tax impact; consider pre-tax deferrals & diversify.</li>
           </ul>
         </div>
-        <button
-          className="bg-success-green text-white px-4 py-2 rounded shadow-soft"
-          onClick={handleGenerateInsight}
-          disabled={llmLoading}
-        >
-          {llmLoading ? 'Generating...' : 'Generate Insight & Add Compliance Note'}
-        </button>
+        
         {llmError && (
           <div className="text-red-600 mt-2">{llmError}</div>
         )}

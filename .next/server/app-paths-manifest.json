@@ -1,0 +1,5 @@
+{
+  "/api/llm-insight/route": "app/api/llm-insight/route.js",
+  "/advisor/page": "app/advisor/page.js",
+  "/client/page": "app/client/page.js"
+}

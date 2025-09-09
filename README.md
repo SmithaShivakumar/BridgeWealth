@@ -4,72 +4,43 @@ It enables advisors and clients to interact with financial data, upload document
 
 **Key Features**
 
-*Two Portals*
-
-Advisor (/advisor): Uploads, simulated parsing, filters (date/account/risk), insights builder, charts, compliance notes, KPI panels.
-
-Client (/client): Uploads, health score gauge, simplified insights, comfort slider, task checklist, NPS prompt.
-
-*Document Flow (Simulated)*
-
-Upload PDF/CSV/XLSX → “Parsed” status → Extracted Data (identity, accounts, investments, events timeline).
-
-Local rule engine recomputes Insights & Financial Health Score; charts update instantly.
-
-Fast GraphRAG + Basic Query
-
-Client-side chunking, entity extraction, inverted+entity indexes, TF-IDF scoring + graph priors.
-
-Local query → top snippets → template-based synthesis (no LLM calls, no APIs).
-
-*NLWeb-Style Chat*
-
-Chat about the parsed data with a floating ChatDock (both portals).
-
-Right-side “Context Used” panel shows cited snippets driving each answer.
-
-*Visualizations*
-
-Allocation Pie, Performance Sparkline, Debt Bar, Emergency Fund Progress, Health Gauge (0–100).
-
-Compliance + KPIs (Mock)
-
-Timestamped notes with “Include disclosure” toggle.
-
-KPIs: Hours Saved (docs × 0.5h), Docs Processed, Insights Generated, Avg Health Score / Tasks %.
-
-**Tech Stack**
-
 •	Frontend (Next.js + React)
-•	Advisor Dashboard:
+
+*Advisor Dashboard:*
 •	Upload financial documents (PDF, CSV, XLSX)
 •	View extracted client and portfolio data
 •	Visualize allocations, performance, and debt
 •	Generate AI-powered insights and compliance notes
 •	Search and filter client data
-•	Client Dashboard:
+
+*Client Dashboard:*
 •	Upload documents and view extracted data
 •	NLWeb-style chat interface for conversational financial guidance
 •	Visualizations and insights tailored for clients
 •	State Management
-•	Zustand:
+
+*Zustand:*
 •	Centralized store for client, portfolio, compliance, and UI state
 •	Actions for uploading, parsing, note management, and chat
 •	Document Parsing & RAG Pipeline
-•	RAG (Retrieval-Augmented Generation):
+
+*RAG (Retrieval-Augmented Generation):*
 •	Parses uploaded documents into text chunks
 •	Extracts entities (tickers, dates, accounts, etc.)
 •	Builds a semantic graph and fast indexes (inverted, entity, tf-idf)
 •	Enables search, query, and context-aware insights
 •	AI Integration
-•	LLM API (OpenAI):
+
+*LLM API (OpenAI):*
 •	Next.js API route proxies requests to OpenAI
 •	Generates actionable financial insights based on client and portfolio context
 •	Error handling for quota, billing, and network issues
 •	UI & Visualization
-•	Tailwind CSS:
+
+*Tailwind CSS:*
 •	Responsive, accessible, and modern UI components
-•	Recharts:
+
+*Recharts:*
 •	Interactive charts for allocation, performance, and debt
 
 **Data Flow**
@@ -110,43 +81,8 @@ Advisors can add, view, and manage compliance notes linked to insights.
 •	tailwind.config.js and tsconfig.json for configuration.
 •	README.md for documentation.
 
-BridgeWealth/
-├── app/
-│   ├── api/
-│   │   └── llm-insight/
-│   │       └── route.ts
-│   ├── advisor/
-│   │   └── page.tsx
-│   ├── client/
-│   │   └── page.tsx
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── AddNoteModal.tsx
-│   ├── AllocationPie.tsx
-│   ├── ChatBox.tsx
-│   ├── ComplianceNotesTable.tsx
-│   ├── DebtBar.tsx
-│   ├── ExtractedDataCard.tsx
-│   ├── PerformanceSparkline.tsx
-│   ├── SearchBox.tsx
-│   └── UploadButton.tsx
-├── lib/
-│   ├── llm.ts
-│   ├── rag/
-│   │   ├── computeTfIdf.ts
-│   │   └── index.ts
-│   ├── store.ts
-│   └── types.ts
-├── public/
-│   └── (static assets, logos, etc.)
-├── styles/
-│   └── (global.css, tailwind.css if needed)
-├── tailwind.config.js
-├── tsconfig.json
-├── package.json
-├── .env.local
-└── README.md
+<img width="392" height="616" alt="Screenshot 2025-09-09 at 12 01 26 AM" src="https://github.com/user-attachments/assets/3698d434-2209-4026-8316-8644ae8d0575" />
+
 
 
 **Getting Started**

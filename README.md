@@ -2,7 +2,7 @@
 It enables advisors and clients to interact with financial data, upload documents, visualize portfolios, and leverage AI-powered insights via LLM integration.
 
 
-**Key Features**
+# **Key Features**
 
 •	Frontend (Next.js + React)
 
@@ -43,7 +43,7 @@ It enables advisors and clients to interact with financial data, upload document
 *Recharts:*
 •	Interactive charts for allocation, performance, and debt
 
-**Data Flow**
+# **Data Flow**
 
 1.	Document Upload:
 User uploads a financial document via the dashboard.
@@ -60,7 +60,7 @@ User requests insights; dashboard calls the LLM API route, which returns tailore
 5.	Compliance & Notes:
 Advisors can add, view, and manage compliance notes linked to insights.
 
-**Technologies**
+# **Technologies**
 
 •	Next.js (App Router)
 •	React (Client Components)
@@ -70,7 +70,7 @@ Advisors can add, view, and manage compliance notes linked to insights.
 •	OpenAI API (LLM Integration)
 •	TypeScript (Type Safety)
 
-**Architecture Overview**
+# **Architecture Overview**
 
 •	app/ contains all Next.js routes, including API endpoints and pages for advisor/client.
 •	components/ holds all reusable React components.
@@ -85,19 +85,20 @@ Advisors can add, view, and manage compliance notes linked to insights.
 
 
 
-**Getting Started**
-# 1) Install
+# **Getting Started**
+
+## 1) Install
 npm install
 
-# 2) Dev server
+## 2) Dev server
 npm run dev
 # Visit http://localhost:3000
 
-# 3) Lint & type-check (optional)
+## 3) Lint & type-check (optional)
 npm run lint
 npm run typecheck
 
-# 4) Tests (Playwright)
+## 4) Tests (Playwright)
 npx playwright install
 npm run test:e2e
 

@@ -57,7 +57,7 @@ export default function AdvisorDashboard() {
             onClick={handleGenerateInsight}
             disabled={llmLoading}
         >
-            {llmLoading ? 'Generating...' : 'Generate Insight & Add Compliance Note'}
+            {llmLoading ? 'Generating...' : 'Generate Insight'}
         </button>
 
       {/* Portfolio Visualizations */}

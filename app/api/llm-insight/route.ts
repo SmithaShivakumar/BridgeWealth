@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     const { client, data } = await req.json()
     const prompt = `Generate actionable financial insights for the following client and their portfolio data:\nClient: ${JSON.stringify(client)}\nData: ${JSON.stringify(data)}`
     const completion = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are a financial advisor assistant.' },
         { role: 'user', content: prompt }
